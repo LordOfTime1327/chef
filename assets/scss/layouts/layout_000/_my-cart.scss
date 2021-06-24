@@ -1,0 +1,308 @@
+.cart-page {
+  &__title {
+    @include font-size(24);
+    font-weight: $semiBoldWeight;
+    color: $titleColor;
+    text-transform: uppercase;
+    padding: 28px 0;
+  }
+
+  &__empty {
+    @include flex(center, center, column);
+    padding-bottom: 40px;
+  }
+  &__empty-img-box {
+    max-width: 130px;
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  &__empty-img {
+    @include img-fluid;
+  }
+  &__empty-text {
+    @include font-size(16);
+    color: #828282;
+    padding-bottom: 20px;
+  }
+
+  .cart-form {
+    padding-bottom: 50px;
+
+    &__item {
+      border-bottom: 1px solid $cartItemBorder;
+      @include flex(flex-start, flex-start, row, nowrap);
+      position: relative;
+      padding-bottom: 5px;
+      margin-top: 65px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    &__img-box {
+      flex: 0 0 65px;
+
+      a {
+        display: block;
+      }
+      img {
+        @include img-fluid;
+      }
+    }
+
+    &__info-box {
+      @include flex(space-between, flex-start, row, wrap);
+      flex: 1;
+      padding-left: 15px;
+    }
+
+    &__prod-name {
+      flex: 0 0 calc(100% - 30px);
+
+      @include font-size(12, 17);
+      font-weight: $semiBoldWeight;
+      color: $titleColor;
+      padding-bottom: 13px;
+
+      & a {
+        @include font-inherit;
+        text-decoration: none;
+      }
+    }
+
+    &__quantity-box {
+      @include flex(flex-start, stretch, row, nowrap);
+    }
+
+    .quantity {
+      input[type="number"] {
+        border: none;
+        font-family: inherit;
+        @include font-size(16, 18);
+      }
+
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+    }
+
+    &__quantity-btn {
+      display: block;
+      border: none;
+      outline: none;
+      background: transparent;
+
+      font-family: inherit;
+      @include font-size(16, 18);
+    }
+
+    &__product-price {
+      @include font-size(18, 18);
+      color: $textColor;
+
+      & > * {
+        @include font-inherit;
+      }
+    }
+
+    &__remove-box {
+      @include flex(center, center);
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    &__remove {
+      display: block;
+      width: 12px;
+      height: 12px;
+      position: relative;
+    }
+    &__remove-line {
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: $black;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+
+      &:nth-child(1) {
+        transform: rotate(45deg);
+      }
+      &:nth-child(2) {
+        transform: rotate(-45deg);
+      }
+    }
+
+    &__actions {
+      display: none;
+    }
+  }
+}
+
+.cart_totals {
+  padding-bottom: 40px;
+}
+.totals {
+  padding-bottom: 33px;
+  font-size: 0;
+
+  .woocommerce-shipping-methods,
+  .woocommerce-shipping-destination {
+    display: none;
+  }
+
+  &__img-box {
+    display: none;
+  }
+
+  .order-total {
+    // @include flex(flex-start, flex-end);
+    &__total-box {
+      @include flex(space-between, center);
+    }
+    &__total-price-box {
+      @include flex(flex-start, center);
+    }
+  }
+  &__total-title {
+    @include font-size(15, 15);
+    font-weight: $regularWeight;
+    text-transform: uppercase;
+    color: $black;
+    padding-right: 18px;
+  }
+  &__total-price {
+    @include font-size(24, 24);
+    font-weight: $mediumWeight;
+    color: $textColor;
+    text-transform: uppercase;
+
+    & * {
+      @include font-inherit;
+    }
+  }
+
+  &__btn {
+    padding: 0 !important;
+
+    a {
+      margin-bottom: 0 !important;
+      min-width: 116px;
+      // display: block !important;
+      // min-width: 128px;
+      // margin: 0 auto !important;
+      // font-family: $secondaryFont !important;
+      // font-size: 16px !important;
+      // font-weight: $boldWeight;
+      // color: $btnText !important;
+      // text-decoration: none !important;
+      // padding: 15px 32px !important;
+      // border: none !important;
+      // outline: none !important;
+      // background: $btnBg !important;
+      // border-radius: 8px !important;
+      // box-shadow: 0 6px 30px rgba($black, 0.15) !important;
+      // cursor: pointer !important;
+    }
+  }
+}
+
+.cart-page {
+  .cart-discount {
+    display: none;
+  }
+
+  .woocommerce-form-coupon-toggle {
+    display: none;
+  }
+  .woocommerce-form-coupon {
+    padding: 0 !important;
+    width: 100%;
+    @include flex(flex-start, stretch);
+  }
+  .woocommerce-form-coupon {
+    margin: 0 !important;
+    margin-bottom: 40px !important;
+    border: 0 !important;
+
+    .form-row {
+      width: auto;
+      padding: 0;
+      margin: 0;
+      float: none;
+      // flex: 1;
+
+      &.form-row-first {
+        flex: 1;
+        padding-left: 15px;
+
+        input[name="coupon_code"] {
+          background: transparent;
+          border: none;
+          border-bottom: 1px solid rgba($black, 0.3);
+          padding: 10px;
+
+          @include font-size(14, 24);
+          font-weight: $light;
+          color: $textColor;
+
+          &::placeholder {
+            @include font-inherit;
+            opacity: 0.5;
+          }
+        }
+      }
+
+      &.form-row-last {
+        button {
+          height: 100%;
+          min-width: 116px;
+          display: block !important;
+          margin: 0 auto !important;
+          font-family: $secondaryFont !important;
+          font-size: 16px !important;
+          font-weight: $boldWeight;
+          color: $grey !important;
+          text-decoration: none !important;
+          padding: 15px 32px !important;
+          border: 1px solid $grey !important;
+          outline: none !important;
+          // background: $btnBg !important;
+          background: transparent;
+          border-radius: 8px !important;
+          box-shadow: 0px 12px 28px -15px rgba(186, 146, 100, 0.69);
+          cursor: pointer !important;
+        }
+      }
+    }
+  }
+}
+
+html[dir="rtl"],
+.rtl {
+  .cart-form {
+    &__info-box {
+      padding-left: 0;
+      padding-right: 15px;
+    }
+
+    &__remove-box {
+      right: auto;
+      left: 0;
+    }
+  }
+
+  .totals {
+    &__total-title {
+      padding-left: 18px;
+      padding-right: 0;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.brands {
+  padding: 62px 0 70px;
+
+  &__title {
+    margin-bottom: 46px;
+  }
+
+  &__item {
+    max-width: 241px;
+  }
+
+  &__img-box {
+    opacity: 0.1;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

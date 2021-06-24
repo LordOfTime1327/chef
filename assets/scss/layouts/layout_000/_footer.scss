@@ -1,0 +1,107 @@
+.footer {
+  background: $bgFooter;
+
+  &__wrapper {
+    padding: 50px 0;
+  }
+
+  &__col {
+    text-align: center;
+    padding-bottom: 30px;
+
+    &:first-child {
+      padding-bottom: 0;
+    }
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  &__logo-box {
+    display: block;
+    width: 127px;
+    margin-bottom: 50px;
+  }
+
+  &__menu-title {
+    font-weight: $semiBoldWeight;
+    @include font-size(18, 24, 0.1);
+    color: $textFooter;
+    padding-bottom: 10px;
+  }
+
+  &-menu__list {
+    display: block;
+    list-style: none;
+    // font-size: 1.4rem;
+    @include font-size(14);
+    font-weight: $lightWeight;
+    color: $textFooter;
+    text-decoration: none;
+
+    li {
+      margin-bottom: 10px;
+    }
+    li,
+    a {
+      @include font-inherit;
+      text-decoration: inherit;
+    }
+  }
+
+  &__tel {
+    @include font-size(16, 22);
+    text-align: center;
+    color: $white;
+    margin-bottom: 10px;
+  }
+  &__tel-link {
+    @include font-inherit;
+    text-decoration: none;
+  }
+  &__address {
+    @include font-size(16, 22);
+    text-align: center;
+    color: $white;
+  }
+
+  &__soc-box {
+    @include flex(center, center, row, nowrap);
+  }
+  &__soc-link {
+    display: block;
+    width: 29px;
+    height: 29px;
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__dev-box {
+    padding: 15px 0;
+    background: $bgFooterDev;
+  }
+  &__dev-text {
+    @include font-size(10);
+    font-weight: $lightWeight;
+    color: $white;
+    text-align: center;
+  }
+}
+
+[dir="rtl"],
+.rtl {
+  .footer {
+    &__soc-link {
+      margin-right: 0;
+      margin-left: 20px;
+
+      &:last-child {
+        margin-right: 0;
+        margin-left: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,175 @@
+.header {
+  box-shadow: none;
+
+  .wrapper {
+    @include flex(flex-start, "", row, nowrap);
+  }
+
+  &__promotion-text {
+    @include font-size(11, 22, 6.3);
+  }
+
+  &__main {
+    padding: 33px 0;
+  }
+
+  &__col {
+    width: auto;
+
+    &_end {
+      @include flex(flex-end, center, row-reverse, nowrap);
+    }
+  }
+
+  &__burger {
+    display: none;
+  }
+
+  &__logo-box {
+    width: 127px;
+  }
+
+  &__nav {
+    display: block;
+    margin-right: auto;
+  }
+
+  &__cart,
+  &__search {
+    display: block;
+  }
+
+  &__cart {
+    margin-left: 20px;
+
+    &:hover {
+      svg path {
+        fill: red;
+      }
+    }
+  }
+  &__cart-link {
+    @include flex(flex-start, center, row, nowrap);
+  }
+
+  &__search {
+    & > svg {
+      display: none;
+    }
+  }
+
+  &__logged-box {
+    @include flex(flex-end, center, row, nowrap);
+    text-decoration: none;
+    padding-left: 50px;
+  }
+  &__logged-img-box {
+    padding-left: 18px;
+  }
+  &__logged-name {
+    @include font-size(18, 22, 0.3);
+    color: $headerText;
+  }
+
+  &__btn-box {
+    display: flex;
+    margin-left: 30px;
+  }
+  &__btn {
+    @include font-size(14, 22, 0.3);
+    border: none;
+    background: transparent;
+  }
+  &__btn-sign-in {
+    color: $headerText;
+  }
+  &__btn-sign-up {
+    color: $btnText;
+    background: $btnBg;
+    border-radius: 5px;
+    padding: 10px 25px;
+    margin-left: 20px;
+  }
+}
+
+.header-menu {
+  display: block;
+  position: static;
+  background: transparent;
+  box-shadow: unset;
+  padding: 10px 10px 10px 0;
+  border-left: 1px solid $menuBorder;
+  transform: translateX(0);
+  max-width: 100%;
+  flex: 1;
+  margin-left: 30px;
+
+  .header {
+    &__logged-box {
+      display: none;
+    }
+    &__btn-box {
+      display: none;
+    }
+  }
+
+  &__list {
+    display: flex;
+
+    li {
+      padding-left: 30px;
+      padding-bottom: 0;
+      white-space: nowrap;
+    }
+  }
+}
+
+[dir="rtl"],
+.rtl {
+  .header {
+    &__nav {
+      margin-left: auto;
+    }
+    &__cart {
+      margin-left: 0;
+      margin-right: 20px;
+    }
+
+    &__logged-box {
+      padding-left: 0px;
+      padding-right: 50px;
+    }
+    &__logged-img-box {
+      padding-left: 0px;
+      padding-right: 18px;
+    }
+
+    &__btn-box {
+      margin-left: 0;
+      margin-right: 30px;
+    }
+    &__btn-sign-up {
+      margin-left: 0;
+      margin-right: 20px;
+    }
+  }
+
+  .header-menu {
+    padding: 10px 0 10px 10px;
+    border-left: none;
+    border-right: 1px solid $menuBorder;
+    margin-right: 30px;
+    transform: translateX(0);
+
+    &__list {
+      li {
+        padding-left: 0;
+        padding-right: 30px;
+
+        &:first-child {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}

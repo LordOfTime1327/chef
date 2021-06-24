@@ -1,0 +1,150 @@
+.cart-page {
+  &__title {
+    @include font-size(72, 72);
+    padding-bottom: 66px;
+  }
+
+  &__empty {
+    padding-bottom: 80px;
+  }
+  &__empty-img-box {
+    max-width: 213px;
+    padding-bottom: 40px;
+  }
+  &__empty-text {
+    @include font-size(35);
+    padding-bottom: 40px;
+  }
+
+  .woocommerce {
+    @include flex(space-between, flex-start, row, nowrap);
+    padding-bottom: 275px;
+  }
+
+  .cart-collaterals {
+    flex: 0 1 470px;
+  }
+
+  .cart-form {
+    flex: 0 1 840px;
+    padding-right: 30px;
+    padding-bottom: 0;
+
+    &__item {
+      padding-bottom: 15px;
+      margin-top: 47px;
+    }
+
+    &__img-box {
+      flex: 0 0 113px;
+    }
+
+    &__info-box {
+      padding-left: 30px;
+    }
+
+    &__prod-name {
+      @include font-size(18, 24);
+      padding-bottom: 55px;
+    }
+
+    .quantity {
+      input[type="number"] {
+        @include font-size(18, 18);
+      }
+    }
+
+    &__quantity-btn {
+      @include font-size(18, 18);
+    }
+  }
+}
+
+.cart_totals {
+  float: none !important;
+  width: 100% !important;
+  padding-bottom: 0;
+}
+.totals {
+  padding-bottom: 0;
+
+  &__img-box {
+    display: block;
+    max-width: 511px;
+    width: 100%;
+    padding-bottom: 55px;
+
+    img {
+      @include img-fluid;
+    }
+  }
+
+  &__total-title {
+    color: $white;
+    @include font-size(18, 18);
+  }
+  &__total-price {
+    color: $white;
+  }
+
+  // &__btn {
+  // a {
+  // margin: 0 !important;
+  // font-size: 18px !important;
+  // color: $white !important;
+  // border: 1px solid $white !important;
+  // border-radius: 5px !important;
+  // background: transparent !important;
+  // }
+  // }
+}
+
+.order-total {
+  background: $gradient1;
+  padding: 50px 37px;
+}
+
+.cart-page {
+  .woocommerce-form-coupon {
+    margin-bottom: 30px !important;
+
+    .form-row {
+      &.form-row-first {
+        padding-left: 15px;
+
+        input[name="coupon_code"] {
+          border-bottom: 1px solid rgba($white, 0.3);
+
+          @include font-size(14, 24);
+          color: $white;
+        }
+      }
+
+      &.form-row-last {
+        button {
+          margin: 0 !important;
+          font-size: 18px !important;
+          color: $white !important;
+          border: 1px solid $white !important;
+          border-radius: 5px !important;
+          background: transparent !important;
+        }
+      }
+    }
+  }
+}
+
+[dir="rtl"],
+.rtl {
+  .cart-page {
+    .cart-form {
+      padding-left: 30px;
+      padding-right: 0;
+
+      &__info-box {
+        padding-left: 0;
+        padding-right: 30px;
+      }
+    }
+  }
+}

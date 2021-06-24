@@ -1,0 +1,26 @@
+.features {
+  &__item {
+    &:hover {
+      background: $bgHoverFeatures;
+      transform: scale(1.05);
+
+      .features {
+        &__img-box svg path {
+          fill: $white;
+        }
+        &__text-box {
+          color: $white;
+        }
+      }
+    }
+  }
+  &__img-box {
+    max-width: 90px;
+    height: 75px;
+    margin-bottom: 20px;
+  }
+  &__text-box {
+    // font-size: 1.8rem;
+    @include font-size(18);
+  }
+}

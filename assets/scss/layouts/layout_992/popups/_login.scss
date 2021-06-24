@@ -1,0 +1,43 @@
+.login-popup {
+  &__title {
+    // font-size: 7.2rem;
+    // line-height: 7.2rem;
+    @include font-size(72, 72);
+    padding-bottom: 42px;
+    text-align: unset;
+  }
+
+  &__item {
+    margin-bottom: 35px;
+  }
+
+  &__eye {
+    cursor: pointer;
+  }
+
+  &__label {
+    // font-size: 1.4rem;
+    @include font-size(14);
+  }
+
+  &__input {
+    // font-size: 1.8rem;
+    // line-height: 1.8rem;
+    @include font-size(18, 18);
+    padding: 15px 25px;
+  }
+
+  &__submit {
+    // font-size: 1.8rem;
+    @include font-size(18);
+    padding: 20px 40px;
+  }
+}
+
+[dir="rtl"],
+.rtl {
+  .close-btn {
+    left: 30px;
+    right: auto;
+  }
+}

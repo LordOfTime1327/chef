@@ -1,0 +1,136 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&family=Quicksand:wght@500;700&display=swap");
+
+$Poppins: "Poppins", sans-serif;
+$Quicksand: "Quicksand", sans-serif;
+
+$mainFont: $Poppins;
+$secondaryFont: $Quicksand;
+
+$baseFontSize: 16px;
+
+$thinWeight: 100;
+$extraLightWeight: 200;
+$lightWeight: 300;
+$regularWeight: 400;
+$mediumWeight: 500;
+$semiBoldWeight: 600;
+$boldWeight: 700;
+$extraBoldWeight: 800;
+$blackWeight: 900;
+
+// Colors
+// orders colors
+$processing: #f2c94c;
+$onhold: #0652dd;
+$failed: #ea2027;
+$completed: #27ae60;
+$cancelled: #d44b51;
+$pending: #7f8c8d;
+$refunded: #7f8c8d;
+
+// colors
+$white: #fff;
+$black: #000;
+
+$red: #d3222a;
+$red2: #9d0e15;
+
+$darkGrey: #323232;
+$darkGrey2: #4f4f4f;
+$grey: #828282;
+$grey2: #aaa;
+$lightGrey: #ececec;
+$light: #f0f0f0;
+
+$gradient1: linear-gradient(152deg, #aaaaaa 12%, #818181 82%);
+$gradient2: linear-gradient(318deg, #cdcdcd 19%, #9d9d9d 89%);
+$gradient3: linear-gradient(152deg, #cdcdcd 12%, #9d9d9d 82%);
+
+$menuBgMob: $white;
+$menuBorder: $lightGrey;
+
+$titleColor: $darkGrey;
+$subtitleColor: $darkGrey2;
+$textColor: $grey;
+
+$headerText: $grey;
+$headerPromBg: $darkGrey;
+$headerPromText: $white;
+$headerCart: $darkGrey;
+
+$search: $grey;
+
+$catsTitleHover: $white;
+$catsBgHover: $darkGrey;
+
+$featuresText: $darkGrey2;
+$bgFeatures: $lightGrey;
+$bgHoverFeatures: $red;
+
+$singleProdTitle: $darkGrey2;
+$singleProdList: $darkGrey2;
+$prodBg: $lightGrey;
+
+$reviewsName: $black;
+$reviewsProd: $black;
+$reviewsText: $grey;
+$reviewsColor: $grey2;
+
+$price: $darkGrey;
+$line: $darkGrey;
+
+$btnBg: $red;
+$btnActive: $red2;
+$btnText: $white;
+
+$popupSubmitHover: #c6464c;
+$popupSubmitActive: $red;
+$popupSubmitDisabled: #757575;
+
+$svgFill: $red;
+
+$bgBrands: rgba($darkGrey, 0.1);
+
+$bgFooter: #171717;
+$bgFooterDev: $black;
+$textFooter: $white;
+
+$text404: $darkGrey;
+$contactFormDark: $black;
+$contactFormLight: $white;
+$contactFormBorderDark: $grey2;
+$contactFormBorderWhite: $white;
+
+$faqLines: $grey2;
+$questionText: $darkGrey2;
+$answerText: $light;
+
+$signColor: $white;
+
+$sliderDots: $lightGrey;
+
+$pagination: $grey;
+$paginationCurrent: $white;
+$paginationBorder: $darkGrey;
+
+$cartItemBorder: $grey2;
+
+$myAccount: $darkGrey2;
+$myAccountNav: $darkGrey;
+$myAccountNavActive: $red;
+$myAccountRequired: $red;
+
+$checkoutTitle: $white;
+$checkoutText: $white;
+
+$breadcrumbsCurrent: $darkGrey;
+$breadcrumbsLinks: #828282;
+$breadcrumbsHover: #4f4f4f;
+
+$homeCatalogArrowBox: $darkGrey;
+
+$instaName: #767676;
+
+$reviewsAuthor: #333;
+$reviewsText: #4f4f4f;

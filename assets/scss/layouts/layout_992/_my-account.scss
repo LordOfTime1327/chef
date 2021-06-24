@@ -1,0 +1,126 @@
+.my-account {
+  &__title {
+    @include font-size(72, 72);
+    padding-bottom: 34px;
+  }
+
+  &__empty-img-box {
+    max-width: 213px;
+    padding-bottom: 40px;
+  }
+  &__empty-text {
+    @include font-size(35);
+    padding-bottom: 40px;
+  }
+
+  &__content-box {
+    @include flex(flex-start, flex-start, row, nowrap);
+  }
+
+  &__nav {
+    flex: 0 0 370px;
+    padding-left: 30px;
+  }
+
+  &__nav-item {
+    @include font-size(18, 20);
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__order-item {
+    padding: 25px 35px;
+  }
+
+  &__order-header {
+    @include flex($wrap: nowrap);
+  }
+
+  &__order-number {
+    flex: unset;
+    padding-left: 20px;
+
+    @include font-size(18, 20);
+  }
+  &__order-date {
+    flex: unset;
+    padding-right: 20px;
+  }
+  &__order-status {
+    flex: unset;
+    padding-top: 0;
+    margin-right: auto;
+
+    @include font-size(14, 20);
+  }
+
+  &__order-name {
+    @include flex(flex-start, center, row, nowrap);
+  }
+  &__order-img-box {
+    padding-bottom: 0;
+  }
+  &__order-prod-title {
+    @include font-size(14, 16);
+    padding-right: 38px;
+  }
+}
+
+.settings {
+  @include flex(space-between, flex-start, row, wrap);
+
+  .form-row {
+    flex: 0 1 calc(345px);
+    padding-bottom: 40px;
+
+    label {
+      @include font-size(18, 20);
+      color: $myAccount;
+      padding-bottom: 30px;
+    }
+
+    input {
+      @include font-size(14, 20);
+    }
+  }
+
+  &__action {
+    flex: 0 0 100%;
+  }
+}
+
+.addresses {
+  @include flex(flex-start, flex-start, row, nowrap);
+
+  &__item {
+    @include flex(flex-start, flex-start, column);
+    flex: calc(50% - 20px);
+    padding-bottom: 30px;
+  }
+
+  &__title {
+    @include font-size(18, 20);
+    padding-bottom: 40px;
+  }
+  &__content {
+    @include font-size(14, 20);
+    padding-bottom: 40px;
+  }
+
+  &__form-box {
+    @include flex(space-between, stretch, row, wrap);
+
+    .form-row {
+      flex: 0 1 calc(33% - 15px);
+      margin-bottom: 50px;
+
+      @include flex(space-between, stretch, column);
+
+      &:last-child {
+        margin-bottom: 50px;
+      }
+    }
+  }
+}
